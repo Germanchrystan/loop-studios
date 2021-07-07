@@ -30,14 +30,17 @@ window.addEventListener("load",(e)=>{
 		const newItem=document.createElement("DIV");
 
 		newItem.innerHTML=`
-					<div class="item-image image${i}"></div>
-					<div class="item-title"><h1>${itemArray[i].title}</h1></div>`;
+					<div>
+						<div class="item-image image${i}">
+							<div class="item-title"><h1>${itemArray[i].title}</h1></div>;
+						</div>
+					</div>`
 
 		let newStyle =	document.createElement("STYLE");
 		newStyle.innerHTML=`.image${i}{
 								background: url('${itemArray[i].url}') no-repeat;
  								background-size: cover;
- 								background-size: contain}`;
+ 								`;
 
  		newItem.classList.add("item");						
 		fragment.appendChild(newItem);
