@@ -1,9 +1,9 @@
-body, html{
+*{
 	box-sizing: border-box;
 	margin:0;
 	padding:0;
-	background: white;
 }
+
 
 
 /*-------------------------------------------------------------------------------------------------------------------
@@ -25,14 +25,22 @@ body, html{
     background-size: cover;
 	filter:saturate(100%);
 	filter:brightness(60%);
+
 }
 .navigation-container{
-	width:80%;
 	position: relative;
 	display:flex;
 	justify-content: space-between;
-	margin: 2em auto;
 	align-items: center;
+	/* border: 2px solid green; */
+	
+}
+.hero-container{
+	position: relative;
+
+	width: 80%;
+	margin: 3em auto;
+	height: 100%;
 	/* border: 2px solid green; */
 
 }
@@ -40,7 +48,10 @@ body, html{
 .navigation-menu ul{
 	align-self: stretch;
 	display: flex;
+	justify-content: space-between;
 	list-style: none;
+	/* border: 2px solid violet; */
+	width: 30vw;
 }
 
 .navigation-menu ul li{
@@ -57,14 +68,21 @@ body, html{
 	font-family: 'Josefin Sans', sans-serif;
 	color:white;
 	font-weight: 300;
-	font-size: 75px;
+	font-size: 5rem;
 	border: solid white 2px;
-	padding: 1em;
-	width:40vw;
-	margin:10% 5% 5px 10%;
+	padding: 0.7em;
+	width:45vw;
+	margin-top: 2em;
+
 }
 
-
+@media screen and(max-width: 700px) {
+	.navigation-menu {
+		display: none;
+		color:pink;
+	}
+	
+}
 
 
 /*-------------------------------------------------------------------------------------------------------------------
@@ -82,19 +100,9 @@ body, html{
 	margin-bottom: 20%;
 }
 
-
-.intro-image{
-
-	background: url('images/desktop/image-interactive.jpg') no-repeat;
-
-}
-
 .intro-text{
-
 	background-color: white;
-
 	overflow: hidden;
-
 }
 
 .intro-text h3{
