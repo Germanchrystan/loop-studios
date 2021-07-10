@@ -4,14 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   
- <!-------------------------------------------------FONTS------------------------------------------------->
+ <!----------------------------------------------- FONTS ----------------------------------------------------->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&display=swap" rel="stylesheet"> 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" type="text/css" href="estilos.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-<!--------------------------------------------------------------------------------------------------------->
+  <!--------------------------------------------------------------------------------------------------------->
+  <!----------------------------------------- ICONSCOUT ----------------------------------------------------->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/thinline.css">
+  
+  <!--------------------------------------------------------------------------------------------------------->
 
 
 
@@ -24,10 +28,15 @@
 <body>
 <div class="hero-section">
 <div class="hero-image"></div>
-  <div class="hero-container">
+  <div class="hero-container" id="hero-container">
     <div class="navigation-container">
       <div class="navigation-logo"><img src="images/logo.svg"></div>
-      <div class="navigation-menu">
+      <div class="sandwich-button" id="sandwich-button">
+        <div class="sandwich-button-bar sandwich-button-bar-1"></div>
+        <div class="sandwich-button-bar sandwich-button-bar-2"></div>
+        <div class="sandwich-button-bar sandwich-button-bar-3"></div>
+      </div>
+      <div class="navigation-menu" id="navigation-menu">
         <ul>  
         <li>About</li>
         <li>Careers</li>

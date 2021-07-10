@@ -49,3 +49,14 @@ window.addEventListener("load",(e)=>{
 	container.appendChild(fragment);
 })
 
+
+
+//============================ SANDWICH MENU ======================================//
+const sandwichButton = document.querySelector('#sandwich-button')
+const navigationMenu = document.querySelector('#navigation-menu')
+
+sandwichButton.addEventListener("click", () => {
+	navigationMenu.classList.toggle('navigation-menu-open')
+	sandwichButton.classList.toggle('sandwich-button-open')
+
+})

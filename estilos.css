@@ -28,7 +28,6 @@ body{
 	justify-content: space-between;
 	align-items: center;
 	/* border: 2px solid green; */
-	
 }
 
 .hero-container{
@@ -38,11 +37,8 @@ body{
 	height: 100%;
 }
 
-.navigation-menu ul{
-	display: flex;
-	list-style: none;
-	justify-content: space-between;
-	flex-direction: column;
+.navigation-logo{
+	z-index: 15;
 }
 
 .navigation-menu {
@@ -50,6 +46,57 @@ body{
 	align-self: stretch;
 	list-style: none;
 	width: 30vw;
+	z-index: 15;
+}
+
+.navigation-menu ul{
+	display: flex;
+	list-style: none;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+
+.navigation-menu-open{
+	display: flex;
+	width: 100vw;
+	background: black;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 10;
+	overflow: hidden;
+}
+
+.navigation-menu-open ul{
+	color: white;
+	margin: auto;
+	height: 50vh;
+	width: 80vw;
+	font-size: 3em;
+	font-family: 'Josefin Sans', sans-serif;
+	text-transform: uppercase;
+}
+
+.sandwich-button{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 2em;
+	height: 1.4em;
+	position:relative;
+	z-index: 15;
+	cursor: pointer;
+}
+
+.sandwich-button-bar{
+	background: white;
+	display: block;
+	height: 0.2em;
+	border-radius: 25%;
+
 }
 
 .hero-title{
@@ -59,7 +106,7 @@ body{
 	font-weight: 300;
 	border: solid white 2px;
 	width: 100%;
-	font-size: 3.5rem;
+	font-size: 250%; /*This way the text doesnt get out of the container box*/
 	margin: 4em auto;
 	padding: .5em;
 }
@@ -151,15 +198,14 @@ body{
 .see-all{
 	border:solid 2px black;
 	text-align: center;
-	font-size: 50%;
+	font-size: 1rem;
 	font-weight: bold;
 	letter-spacing: 5px;
 
 	height: 10%;
-	width:10%;
-
-	padding: 0 1em;
-	margin: 1em;
+	
+	padding: 1em;
+	margin: 1em 0;
 }
 
 
@@ -318,7 +364,10 @@ a{
 
 --------------------------------------------------------------------------------------------------------------------*/
 @media screen and (min-width: 1100px){
-
+	.sandwich-button{
+		display: none;
+	}
+	
 	.navigation-menu{
 		display: block;
 	}
