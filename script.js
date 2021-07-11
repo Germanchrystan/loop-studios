@@ -53,10 +53,15 @@ window.addEventListener("load",(e)=>{
 
 //============================ SANDWICH MENU ======================================//
 const sandwichButton = document.querySelector('#sandwich-button')
-const navigationMenu = document.querySelector('#navigation-menu')
+const navigationMenu = document.querySelector('#navigation-menu');
+const body = document.querySelector('body');
+let canScroll = true;
+
 
 sandwichButton.addEventListener("click", () => {
 	navigationMenu.classList.toggle('navigation-menu-open')
 	sandwichButton.classList.toggle('sandwich-button-open')
-
+	canScroll = !canScroll;
+	
+	body.style['overflow-y'] = `${canScroll? 'auto':'hidden'}`
 })
