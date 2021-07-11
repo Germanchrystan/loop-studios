@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300&display=swap');
 *{
 	box-sizing: border-box;
 	margin:0;
@@ -7,6 +9,7 @@
 body{
 	overflow-x: hidden;
 }
+
 /*-------------------------------------------------------------------------------------------------------------------
 
 									
@@ -103,7 +106,7 @@ body{
 	position: relative;
 	font-family: 'Josefin Sans', sans-serif;
 	color:white;
-	font-weight: 300;
+	font-weight: 1;
 	border: solid white 2px;
 	width: 100%;
 	font-size: 240%; /*This way the text doesnt get out of the container box*/
@@ -112,7 +115,6 @@ body{
 }
 
 .hero-image{
-	background-position-x: center;
 	position:absolute; 
 	top:0px; 
 	right:0px; 
@@ -122,6 +124,8 @@ body{
 	height: 100%;
 	background: url('images/desktop/image-hero.jpg') no-repeat;
 	background-size: cover;
+	
+	background-position: center;
 	filter:saturate(100%);
 	filter:brightness(60%);
 }
@@ -145,15 +149,28 @@ body{
 
 }
 
-.intro-text{
+.intro-text-container{
 	background-color: white;
 	text-align: center;
+	height: 50vh;
+	display: flex;
+	justify-content: center;
+	/* align-items: center; */
+}
+
+.intro-text{
+	height: 80%;
+	margin: auto 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
 }
 
 .intro-text h3{
-	font-family: 'Alata', sans-serif;
-	font-weight: 100;
-	font-size: 4em;
+	text-transform: uppercase;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 200;
+	font-size: 3em;
 	letter-spacing: 2px;
 	line-height: 1;
 
@@ -290,6 +307,7 @@ footer{
 	width: 80vw;
 	padding: 3em 0;
 }
+
 .footer-logo,
 .footer-logo img{
 	margin: 0 auto;
@@ -396,8 +414,37 @@ a{
 	.hero-title{
 		font-size: 5rem;
 		padding: 0.6em 1em;
-		width:45vw;
+		width:48vw;
 		margin: 2em 0;
+
+	}
+/*---------------------------------- INTRO -----------------------------------------*/
+	.intro-container{
+		display: grid;
+		grid-template-columns: repeat(5,1fr);
+		grid-template-rows: repeat(5,1fr);
+		margin-bottom: 0;
+	}
+
+	.intro-image{
+		grid-row: 1/4;
+		grid-column: 1/4;
+	}
+
+	.intro-text-container{
+		background: white;
+		/* border: 2px solid grey; */
+		width: 40vw;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		/* height: 40vh; */
+		grid-row: 3/5;
+		grid-column: 3/5;
+	}
+	.intro-text{
+		width: 70%;
+		height: fit-content;
 	}
 /*--------------------------------- CREATIONS ----------------------------------------*/
 	.item-container{
